@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Styled Table</title>
+    <style>
+        /* Tablo tasarımına genel stil uygulaması */
+        table {
+            width: 90%; /* Tablonun genişliğini %80'den %90'a çıkardım */
+            border-collapse: collapse; /* Tablonun kenar çizgilerinin birleşmesini sağlar */
+            margin: 20px auto; /* Tablonun dikeyde ve yatayda ortalanması */
+            font-family: Arial, sans-serif; /* Yazı tipini belirledim */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tabloya hafif bir gölge ekledim */
+        }
+
+        /* Başlık hücreleri ve veri hücreleri için ortak stil */
+        th, td {
+            padding: 20px; /* Hücre içindeki boşluğu artırarak, daha geniş bir tablo görünümü sağladım */
+            text-align: center; /* Tablodaki metinlerin ortalanmasını sağladım */
+            border: 2px solid #4CAF50; /* Kenarlıkları yeşil renkte yaptım */
+        }
+
+        /* Tablo başlık hücreleri için stil */
+        th {
+            background-color: #4CAF50; /* Başlık hücreleri için yeşil arka plan */
+            color: white; /* Başlık metinlerinin rengini beyaz yaptım */
+            text-transform: uppercase; /* Başlık yazılarını büyük harfe çevirdim */
+            letter-spacing: 2px; /* Başlık harfleri arasına boşluk koydum */
+        }
+
+        /* Satırların arka plan rengini ikiye ayırdım: Tek ve çift satırlar */
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* Çift satırlar için açık gri arka plan */
+        }
+
+        tr:nth-child(odd) {
+            background-color: #ffffff; /* Tek satırlar için beyaz arka plan */
+        }
+
+        /* Fare üzerine geldiğinde satırın arka plan renginin değişmesi */
+        tr:hover {
+            background-color: #ddd; /* Hover efektiyle satır rengi gri olur */
+            transition: background-color 0.3s ease; /* Geçiş animasyonu ekleyerek daha yumuşak bir renk değişimi sağladım */
+        }
+
+        /* Tablo başlığı (caption) için stil */
+        caption {
+            font-size: 1.8em; /* Tablo başlığını daha büyük ve dikkat çekici yaptım */
+            margin-bottom: 15px; /* Başlığın tabloya olan mesafesini artırdım */
+            font-weight: bold; /* Başlığı kalınlaştırdım */
+            color: #333; /* Başlık rengini daha koyu bir gri yaptım */
+        }
+
+        /* Tablo altındaki bilgiler (footer stili) */
+        tfoot {
+            background-color: #4CAF50; /* Tablo altbilgisi için arka plan rengini yeşil yaptım */
+            color: white; /* Metin rengini beyaz yaptım */
+        }
+
+        tfoot td {
+            padding: 10px; /* Altbilgi hücrelerine iç boşluk verdim */
+            font-style: italic; /* Metinleri italik yaptım */
+        }
+
+        /* Tablo hücrelerinin genişliğini ayarlamak */
+        td {
+            min-width: 150px; /* Hücrelerin minimum genişliğini ayarladım */
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <caption>ÖRNEK TABLO</caption>
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row 1, Col 1</td>
+                <td>Row 1, Col 2</td>
+                <td>Row 1, Col 3</td>
+            </tr>
+            <tr>
+                <td>Row 2, Col 1</td>
+                <td>Row 2, Col 2</td>
+                <td>Row 2, Col 3</td>
+            </tr>
+            <tr>
+                <td>Row 3, Col 1</td>
+                <td>Row 3, Col 2</td>
+                <td>Row 3, Col 3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Tablo Altbilgisi: Ekstra bilgiler burada yer alabilir.</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

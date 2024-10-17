@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Sitesi</title>
+    <!-- Bootstrap CSS dosyasını ekliyoruz -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        /* Mor renk teması */
+        .navbar {
+            background-color: #83974a; 
+        }
+        .btn-primary {
+            background-color: #a6ccae; 
+            border-color: #7f7483;
+        }
+        .carousel-caption h5, .carousel-caption p {
+            color: #0a0a0a; 
+        }
+        .card-title, .card-text {
+            color: #09010f; 
+        }
+        .carousel-item img {
+            height: 400px; 
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img src="http://www.omu.edu.tr/sites/all/themes/anasayfa/images/Kurumsal/OMULogo-TR-PNG.png" alt="Logo" style="width: 50px; height: 50px;"> <!-- Logo için örnek bağlantı -->
+           ONDOKUZ MAYIS ÜNİVERSİTESİ 
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Anasayfa <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Hakkımızda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Hizmetler</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">İletişim</a>
+                </li>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Daha Fazla
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Blog</a>
+                        <a class="dropdown-item" href="#">Sık Sorulan Sorular</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Carousel (Slayt Gösterisi) -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="https://www.omu.edu.tr/sites/default/files/omu_dji_0235gww.jpg" alt="First slide"> <!-- Slide 1 Resmi -->
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>İlk Slide Başlığı</h5>
+                    <p>Bu, ilk slide'ın açıklama metni.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://www.tercihrobotu.com.tr/MediaFiles/Universities/Images/IMG_000081.jpg" alt="Second slide"> <!-- Slide 2 Resmi -->
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>İkinci Slide Başlığı</h5>
+                    <p>Bu, ikinci slide'ın açıklama metni.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://www.omu.edu.tr/sites/default/files/omu_dji_0358g_muhendislik.jpg" alt="Third slide"> <!-- Slide 3 Resmi -->
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Üçüncü Slide Başlığı</h5>
+                    <p>Bu, üçüncü slide'ın açıklama metni.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Önceki</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Sonraki</span>
+        </a>
+    </div>
+
+    <!-- Hizmetler Bölümü (Kartlar) -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://bil-muhendislik.omu.edu.tr/user/themes/fakulte/assets/images/omu_tr.png" class="card-img-top" alt="Hizmet 1"> <!-- 1 Resmi -->
+                    <div class="card-body">
+                        <h5 class="card-title">1</h5>
+                        <p class="card-text">AÇIKLAMA</p>
+                        <a href="#" class="btn btn-primary">Daha Fazla Bilgi</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://bil-muhendislik.omu.edu.tr/user/themes/fakulte/assets/images/omu_tr.png" class="card-img-top" alt="Hizmet 2"> <!--  2 Resmi -->
+                    <div class="card-body">
+                        <h5 class="card-title">2</h5>
+                        <p class="card-text">AÇIKLAMA</p>
+                        <a href="#" class="btn btn-primary">Daha Fazla Bilgi</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://bil-muhendislik.omu.edu.tr/user/themes/fakulte/assets/images/omu_tr.png" class="card-img-top" alt="Hizmet 3"> <!--  3 Resmi -->
+                    <div class="card-body">
+                        <h5 class="card-title">3</h5>
+                        <p class="card-text">AÇIKLAMA</p>
+                        <a href="#" class="btn btn-primary">Daha Fazla Bilgi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim Formu -->
+    <section class="container mb-5">
+        <h2>İletişim</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Ad Soyad</label>
+                <input type="text" class="form-control" id="name" placeholder="Adınızı ve soyadınızı girin">
+            </div>
+            <div class="form-group">
+                <label for="email">E-posta</label>
+                <input type="email" class="form-control" id="email" placeholder="E-posta adresinizi girin">
+            </div>
+            <div class="form-group">
+                <label for="message">Mesajınız</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Mesajınızı yazın"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Gönder</button>
+        </form>
+    </section>
+
+    <!-- Bootstrap JS ve Popper.js dosyalarını ekliyoruz -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
