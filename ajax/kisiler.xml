@@ -1,0 +1,62 @@
+<catalog>
+    <person>
+        <numara>101</numara>
+        <adsoyad>EDA ARSLAN</adsoyad>
+        <bolum>Bilgisayar Mühendisliği</bolum>
+        <sinif>4</sinif>
+    </person>
+    <person>
+        <numara>102</numara>
+        <adsoyad>FATMANUR ÖZKAN</adsoyad>
+        <bolum>Öğretmen</bolum>
+        <sinif>3</sinif>
+    </person>
+    <person>
+        <numara>103</numara>
+        <adsoyad>MELİSSA YURT</adsoyad>
+        <bolum>Eczacı</bolum>
+        <sinif>2</sinif>
+    </person>
+    <person>
+        <numara>104</numara>
+        <adsoyad>BEYZA SU ÇALIK</adsoyad>
+        <bolum>Veteriner</bolum>
+        <sinif>1</sinif>
+    </person>
+    <person>
+        <numara>105</numara>
+        <adsoyad>SUDE ÇELİK</adsoyad>
+        <bolum>İnşaat Mühendisliği</bolum>
+        <sinif>4</sinif>
+    </person>
+    <person>
+        <numara>106</numara>
+        <adsoyad>TUNA BAŞ</adsoyad>
+        <bolum>Mimarlık</bolum>
+        <sinif>2</sinif>
+    </person>
+    <person>
+        <numara>107</numara>
+        <adsoyad>AHMET YILMAZ</adsoyad>
+        <bolum>Matematik</bolum>
+        <sinif>3</sinif>
+    </person>
+    <person>
+        <numara>108</numara>
+        <adsoyad>İBRAHİM YILDIZ</adsoyad>
+        <bolum>Makine Mühendisliği</bolum>
+        <sinif>1</sinif>
+    </person>
+    <person>
+        <numara>109</numara>
+        <adsoyad>İsmail HACIOĞLU</adsoyad>
+        <bolum>Çevre Mühendisliği</bolum>
+        <sinif>2</sinif>
+    </person>
+    <person>
+        <numara>110</numara>
+        <adsoyad>ZEYNEP ARSLAN</adsoyad>
+        <bolum>Tıp</bolum>
+        <sinif>3</sinif>
+    </person>
+</catalog>

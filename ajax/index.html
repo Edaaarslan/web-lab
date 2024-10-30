@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kişi Bilgileri</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #343a40;
+            margin-top: 20px;
+            text-align: center;
+        }
+        #details {
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #details h2 {
+            color: #007bff;
+        }
+        .table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+        }
+        .table thead th {
+            background-color: #007bff;
+            color: white;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+        }
+        .table tbody tr {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .table tbody tr:hover {
+            transform: scale(1.02);
+        }
+        .table td {
+            padding: 15px;
+            text-align: center;
+        }
+        .person-link {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .person-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1>Kişi Bilgileri</h1>
+        
+        <!-- Tıklanınca bilgilerin getirileceği alan -->
+        <div id="details" class="my-4">
+            <p class="text-muted">Kişi bilgileri burada görünecek.</p>
+        </div>
+
+        <!-- Kişi listesi -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Kişi Listesi</th>
+                </tr>
+            </thead>
+            <tbody id="people-list">
+                <tr><td><a href="#" class="person-link" onclick="showDetails('101')">EDA ARSLAN - 101</a></td></tr>
+                <tr><td><a href="#" class="person-link" onclick="showDetails('102')">FATMANUR ÖZKAN - 102</a></td></tr>
+                <tr><td><a href="#" class="person-link" onclick="showDetails('103')">MELİSSA YURT - 103</a></td></tr>
+                <tr><td><a href="#" class="person-link" onclick="showDetails('104')">BEYZA SU ÇALIK - 104</a></td></tr>
+                <tr><td><a href="#" class="person-link" onclick="showDetails('105')">SUDE ÇELİK - 105</a></td></tr>
+                <tr><td><a href="#" class="person-link" onclick="showDetails('106')">TUNA BAŞ - 106</a></td></tr>
+                <tr><td><a href="#" class="person-link" onclick="showDetails('107')">AHMET YILMAZ - 107</a></td></tr>
+                <tr><td><a href="#" class="person-link" onclick="showDetails('108')">İBRAHİM YILDIZ - 108</a></td></tr>
+                <tr><td><a href="#" class="person-link" onclick="showDetails('109')">İSMAİL HACIOĞLU - 109</a></td></tr>
+                <tr><td><a href="#" class="person-link" onclick="showDetails('110')">ZEYNEP ARSLAN - 110</a></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function showDetails(numara) {
+            $.ajax({
+                url: "kisiler.xml",
+                dataType: "xml",
+                success: function(data) {
+                    const person = $(data).find('person').filter((_, el) => $(el).find('numara').text() === numara);
+                    const details = `
+                        <h2>Detay Bilgiler</h2>
+                        <p><strong>Numara:</strong> ${person.find('numara').text()}</p>
+                        <p><strong>Ad Soyad:</strong> ${person.find('adsoyad').text()}</p>
+                        <p><strong>Bölüm:</strong> ${person.find('bolum').text()}</p>
+                        <p><strong>Sınıf:</strong> ${person.find('sinif').text()}</p>
+                    `;
+                    $('#details').html(details);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
